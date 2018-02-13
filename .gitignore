@@ -1,0 +1,9 @@
+# vsproject
+*.sln
+*/bin/
+*/obj/
+*/Properties/
+*.csproj
+*.config
+*/Program.cs
+*.suo
