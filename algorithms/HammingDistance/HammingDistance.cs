@@ -28,39 +28,15 @@ namespace HammingDistance
     {
         public int HammingDistance_1(int x, int y)
         {
-            string xStr = Convert.ToString(x, 2);
-            string yStr = Convert.ToString(y, 2);
-            int max = xStr.Length > yStr.Length ? xStr.Length : yStr.Length;
-
-            char[] xChars = new char[max];
-            
-            char[] yChars = new char[max];
-
-            for(int i=0; i<max; i++)
+            int count = 0;
+            for(int i=31; i>=0; i--)
             {
-                //if('' == xChars[i])
-                //{
-                //    xChars[i] = '0';
-                //}
-
-                //if (null == yChars[i])
-                //{
-                //    yChars[i] = '0';
-                //}
-
-                if(xChars[i] == yChars[i])
+                if(((x>>i &1) ^ (y>>i &1)) == 1)//per bit compare
                 {
-
+                    count++;
                 }
             }
-
-
-
-
-
-            Console.WriteLine(xStr +"\n" +yStr);
-
-            return 0;
+            return count;
         }
     }
 }
