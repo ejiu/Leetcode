@@ -82,20 +82,20 @@ namespace ReverseWordsInAStringIII
         //    return s;
         //}
 
-        //public string ReverseWords(string s)
-        //{
-        //    string[] str = s.Split(' ');
-        //    s = "";
-        //    int l = str.Length;
-        //    StringBuilder sb = new StringBuilder();
-        //    for (int i = 0; i < l; i++)
-        //    {
-        //        char[] c = str[i].ToCharArray();
-        //        sb.Append(string.Join("", c.Reverse()));
-        //        sb.Append(" ");
-        //    }
-        //    return sb.ToString().Trim();
-        //}
+        public string ReverseWords(string s)
+        {
+            string[] str = s.Split(' ');
+            s = "";
+            int l = str.Length;
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < l; i++)
+            {
+                char[] c = str[i].ToCharArray();
+                sb.Append(string.Join("", c.Reverse()));
+                sb.Append(" ");
+            }
+            return sb.ToString().Trim();
+        }
 
         //栈结构,开销最大
         //public string ReverseWords(string s)
