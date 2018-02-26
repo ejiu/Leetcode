@@ -52,6 +52,9 @@ namespace TrimABinarySearchTree
             root.left = TrimBST(root.left, L, R);
             root.right = TrimBST(root.right, L, R);
             return root;
+            //BST树的特点是:一个节点的 L值 <= 节点值 <= R值
+            //如上原理为,通过LR区间筛选节点值,不符合则进一步筛选;
+            //树的数据访问,递归是常用手法;
         }
     }
 }
